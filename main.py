@@ -13,7 +13,7 @@ mode = 'kmeans_3D'
 from tkinter import *
 from tkinter import ttk
 
-options = ['dimension reduction', 'mnist - logis', 'kmeans_2D', 'kmeans_3D', 'GMM - TODO', 'hmm']
+options = ['Dimension Reduction', 'MNIST - Logistic Regression', 'K-Means 2D', 'K-Means 3D', 'Gaussian Mixture Models', 'Hidden Markov Models']
 # create a tkinter window with each option
 root = Tk()
 root.title("Choose a mode")
@@ -47,30 +47,30 @@ root.mainloop()
 
 if __name__ == "__main__":
     display = pygame.display.set_mode((800, 600))
-    pygame.display.set_caption("CS/ML Visualizer")
+    pygame.display.set_caption("CS/ML Visualizer - " + mode)
 
-    if mode == 'dimension reduction':
+    if mode == 'Dimension Reduction (WIP)':
         dr = dimension_reduction(display)
         dr.update()
 
-    if mode == 'mnist - logis':
+    if mode == 'MNIST - Logistic Regression':
         visualizer = mnist_visualizer(display)
         visualizer.update()
 
-    if mode == 'kmeans_2D':
+    if mode == 'K-Means 2D':
         kmeans = kmeans_2D(display)
         kmeans.update()
 
-    if mode == 'kmeans_3D':
+    if mode == 'K-Means 3D':
         kmeans = kmeans_3D(display)
         kmeans.update()
 
-    if mode == 'GMM - TODO':
+    if mode == 'Gaussian Mixture Models':
         gmm = gmm_3d(display)
         gmm.update()
 
 
-    if mode == 'hmm':
+    if mode == 'Hidden Markov Models':
         hmm = hmm_visualizer(display)
         hmm.update()
 

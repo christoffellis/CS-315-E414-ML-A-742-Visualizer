@@ -3,11 +3,15 @@ import time
 import pygame
 import numpy as np
 
+import configparser
+config = configparser.ConfigParser()
+config.read('config.ini')
+
 class kmeans_3D:
     def __init__(self, display):
         self.exit = False
         self.display = display
-        self.cluster_count = 5
+        self.cluster_count = config.getint('kmeans3d', 'cluster_count')
         self.reset()
 
         self.theta = 0.5
@@ -104,7 +108,10 @@ class kmeans_3D:
         # set the means to 3 equidistant points on a circle
         # data clusters must have the same random cov, cov must be smaller than 0.5
 
-        cov = np.array([[0.1, 0, 0], [0, 0.1, 0], [0, 0, 0.1]])
+        xvar = config.getfloat('kmeans3d', 'x_variance')
+        yvar = config.getfloat('kmeans3d', 'y_variance')
+        zvar = config.getfloat('kmeans3d', 'z_variance')
+        cov = np.array([[xvar, 0, 0], [0, yvar, 0], [0, 0, zvar]])
         self.means = np.zeros((self.cluster_count, 3))
         for i in range(self.cluster_count):
             self.means[i, :] = np.array([1.5 * np.cos(2 * np.pi * i / self.cluster_count),

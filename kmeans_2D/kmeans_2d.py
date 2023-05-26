@@ -10,11 +10,17 @@ try:
 except:
     print("user_classes.k_means not found, using default kmeans")
 
+import configparser
+config = configparser.ConfigParser()
+config.read('config.ini')
+
 class kmeans_2D:
     def __init__(self, display):
         self.exit = False
         self.display = display
-        self.cluster_count = 3
+        print(config.sections())
+        print(config.options('kmeans2d'))
+        self.cluster_count = config.getint('kmeans2d', 'cluster_count')
         self.reset()
 
     def reset(self):
@@ -57,7 +63,7 @@ class kmeans_2D:
                             (self.display.get_width() - offset[0], self.display.get_height() / 2))
 
     def draw_data(self):
-        colors = [(255, 100, 50), (50, 255, 100), (100, 50, 255)]
+        colors = [(255, 100, 50), (50, 255, 100), (100, 50, 255), (255, 255, 100), (100, 255, 255), (255, 100, 255)]
         null_color = (120, 120, 120)
         for i in range(self.data.shape[0]):
             if self.assignment[i, 0] == -1:
@@ -71,7 +77,7 @@ class kmeans_2D:
 
     def draw_means(self):
         #draw a little cross at the position of the means
-        colors = [(255, 25, 12), (12, 255, 25), (25, 12, 255)]
+        colors = [(255, 25, 12), (12, 255, 25), (25, 12, 255), (255, 255, 25), (25, 255, 255), (255, 25, 255)]
         for i in range(self.means.shape[0]):
             pygame.draw.line(self.display, colors[i], (int(self.means[i, 0] * 100) + 400 - 5,
                                                        int(self.means[i, 1] * 100) + 300 - 5),
@@ -95,8 +101,9 @@ class kmeans_2D:
 
         # set the means to 3 equidistant points on a circle
         # data clusters must have the same random cov, cov must be smaller than 0.5
-
-        cov = np.array([[0.1, 0], [0, 0.1]])
+        xvar = config.getfloat('kmeans2d', 'x_variance')
+        yvar = config.getfloat('kmeans2d', 'y_variance')
+        cov = np.array([[xvar, 0], [0, yvar]])
         self.means = np.zeros((self.cluster_count, 2))
         for i in range(self.cluster_count):
             self.means[i, :] = np.array([np.cos(2 * np.pi * i / self.cluster_count),

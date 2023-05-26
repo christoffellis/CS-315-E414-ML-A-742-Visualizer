@@ -88,12 +88,28 @@ or
 
 ![USD/BTC Exchange Rates](images/hmm.png)
 
+## Config
+A configuration file, `config.ini`, is used to set the parameters for each algorithm.
+The parameters are as follows:
+### kmeans2d
+- `cluster_count` - The number of clusters to use (default: 3), [1, 6]
+- `x_variance` - The variance of the x values (default: 0.1)
+- `y_variance` - The variance of the y values (default: 0.1)
 
+### kmeans3d
+- `cluster_count` - The number of clusters to use (default: 3), [1, 6]
+- `x_variance` - The variance of the x values (default: 0.1)
+- `y_variance` - The variance of the y values (default: 0.1)
+- `z_variance` - The variance of the z values (default: 0.1)
+
+### gmm3d
+- `cluster_count` - The number of clusters to use (default: 3), [1, 6]
+- `x_variance` - The variance of the x values (default: 0.1)
+- `y_variance` - The variance of the y values (default: 0.1)
+- `z_variance` - The variance of the z values (default: 0.1)
 
 ## Future Features
 - Implementation of user loaded algorithms
 - More algorithms
 - Additional visualization for HMMs
-- Customization from user input for
-  - Data means [GMM]
-  - Data standard deviations [GMM]
+- More user friendly interface for changing parameters
