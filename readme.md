@@ -96,4 +96,4 @@ or
 - Additional visualization for HMMs
 - Customization from user input for
   - Data means [GMM]
-  - Data standard deviations [K-Means, GMM]
+  - Data standard deviations [GMM]
