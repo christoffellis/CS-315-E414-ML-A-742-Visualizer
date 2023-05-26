@@ -15,7 +15,11 @@ hmmlearn
 sklearn.mixture._gaussian_mixture
 sklearn.linear_model.LogisticRegression
 ```
-### [Current Features](#current-features) · [Installation](#Installation) · [Usage](#usage) [Future Features](#future-features) 
+## Index
+### · [Current Features](#current-features)
+### · [Installation](#Installation)
+### · [Usage](#usage)
+### · [Future Features](#future-features) 
 
 ## Current Features
 
