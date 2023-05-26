@@ -13,7 +13,7 @@ mode = 'kmeans_3D'
 from tkinter import *
 from tkinter import ttk
 
-options = ['dimension reduction', 'mnist', 'kmeans_2D', 'kmeans_3D', 'GMM - TODO', 'hmm']
+options = ['dimension reduction', 'mnist - logis', 'kmeans_2D', 'kmeans_3D', 'GMM - TODO', 'hmm']
 # create a tkinter window with each option
 root = Tk()
 root.title("Choose a mode")

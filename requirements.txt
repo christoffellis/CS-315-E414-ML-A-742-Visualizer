@@ -1,0 +1,6 @@
+scikit-learn~=1.2.2
+pygame~=2.4.0
+numpy~=1.24.3
+ccxt~=3.0.106
+hmmlearn~=0.3.0
+matplotlib~=3.7.1
