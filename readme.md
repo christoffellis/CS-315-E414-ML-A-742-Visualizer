@@ -46,14 +46,15 @@ The visualizer will check to see if the method exists and use it if it does.
     pip install -r requirements.txt
     ```
 4. Run the main.py file (from the root directory)
+
     ```commandline
     python main.py
     ```
-or
+    or
     ```commandline
     python3 main.py
     ```
-or
+    or
     ```commandline
     py3 main.py
     ```
