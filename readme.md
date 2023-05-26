@@ -20,6 +20,7 @@ sklearn.linear_model.LogisticRegression
 ### · [Installation](#Installation)
 ### · [Usage](#usage)
 ### · [Future Features](#future-features) 
+### · [Config](#config)
 
 ## Current Features
 
