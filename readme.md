@@ -28,7 +28,7 @@ sklearn.linear_model.LogisticRegression
 
 ### Others
 #### Own implementation of K-Means Clustering can be implemented
-Implement in `user_classes/kmeans.py` and add `iterate()` method to the class.
+Implement in `user_classes/k_means.py` and add `iterate()` method to the class.
 The visualizer will check to see if the method exists and use it if it does.
 
 ## Installation

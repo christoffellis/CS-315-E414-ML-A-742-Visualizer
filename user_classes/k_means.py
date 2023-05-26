@@ -25,7 +25,6 @@
 #     with the current state of the algorithm.
 #     '''
 #
-#
 #     for j, data_point in enumerate(data):
 #         # calculate the distance to each mean
 #         distances = np.zeros(cluster_count)
@@ -42,5 +41,4 @@
 #         means[i, :] = np.mean(data[assignment[:, 0] == i, :], axis=0)
 #     draw()
 #
-#     print("kmeans_user.py: iterate() called")
 #
