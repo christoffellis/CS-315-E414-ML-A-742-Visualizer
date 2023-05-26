@@ -63,13 +63,13 @@ py3 main.py
 
 #### MNIST
 
-![MNIST Logistic Regression](images/logistic-regression-mnist.png)
+![MNIST Logistic Regression](images/mnist-logis.png)
 
 ### Hidden Markov Models
 
 #### USD/BTC Exchange Rates
 
-![USD/BTC Exchange Rates](images/hmm-usd-btc.png)
+![USD/BTC Exchange Rates](images/hmm.png)
 
 
 
