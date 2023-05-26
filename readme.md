@@ -85,5 +85,5 @@ The visualizer will check to see if the method exists and use it if it does.
 - More algorithms
 - Additional visualization for HMMs
 - Customization from user input for
-  - Data means [K-Means, GMM]
+  - Data means [GMM]
   - Data standard deviations [K-Means, GMM]
