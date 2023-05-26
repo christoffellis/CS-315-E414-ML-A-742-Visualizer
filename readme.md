@@ -14,7 +14,7 @@ the way it would outside of this course.
 `sklearn.mixture._gaussian_mixture`
 `sklearn.linear_model.LogisticRegression`
 
-### [Current Features](#Current Features) · [Installation](#Installation) · [Future Features](#Future Features) 
+### [Current Features](#current-features) · [Installation](#Installation) · [Future Features](#future-features) 
 
 ## Current Features
     - 2D K-Means Clustering
