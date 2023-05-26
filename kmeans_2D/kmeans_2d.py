@@ -3,6 +3,13 @@ import time
 import pygame
 import numpy as np
 
+user_kmeans = False
+try:
+    from user_classes.k_means import iterate
+    user_kmeans = True
+except:
+    print("user_classes.k_means not found, using default kmeans")
+
 class kmeans_2D:
     def __init__(self, display):
         self.exit = False
@@ -104,25 +111,37 @@ class kmeans_2D:
         #self.iterate()
 
     def iterate(self):
-        if self.last_step != 'estimation':
-            self.last_step = 'estimation'
-            for j, data_point in enumerate(self.data):
-                # calculate the distance to each mean
-                distances = np.zeros(self.cluster_count)
-                for i in range(self.cluster_count):
-                    distances[i] = np.linalg.norm(data_point - self.means[i, :])
-                # assign the data point to the index of the closest mean
-                if (self.assignment[j] != np.argmin(distances)):
+        if user_kmeans:
 
-                    self.assignment[j] = np.argmin(distances)
-                    self.draw()
-                    time.sleep(0.001)
+            iterate(self.data,
+                                self.means,
+                                self.assignment,
+                                self.cluster_count,
+                                draw=self.draw,
+                                )
+
         else:
-            self.last_step = 'maximization'
-            # calculate the new means
-            for i in range(self.cluster_count):
-                self.means[i, :] = np.mean(self.data[self.assignment[:, 0] == i, :], axis=0)
-            self.draw()
+            if self.last_step != 'estimation':
+                self.last_step = 'estimation'
+                for j, data_point in enumerate(self.data):
+                    # calculate the distance to each mean
+                    distances = np.zeros(self.cluster_count)
+                    for i in range(self.cluster_count):
+                        distances[i] = np.linalg.norm(data_point - self.means[i, :])
+                    # assign the data point to the index of the closest mean
+                    if (self.assignment[j] != np.argmin(distances)):
+
+                        self.assignment[j] = np.argmin(distances)
+                        self.draw()
+                        time.sleep(0.001)
+            else:
+                self.last_step = 'maximization'
+                # calculate the new means
+                for i in range(self.cluster_count):
+                    self.means[i, :] = np.mean(self.data[self.assignment[:, 0] == i, :], axis=0)
+                self.draw()
+
+        self.draw()
 
     def show_info(self):
         text = [

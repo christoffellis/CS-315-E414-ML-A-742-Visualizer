@@ -1,7 +1,12 @@
 import ccxt
 import pygame
 import numpy
-from hmmlearn import hmm
+try:
+    from user_classes import hmm
+
+except ImportError:
+    from hmmlearn import hmm
+    print('User class hmm not found, using hmmlearn instead')
 import numpy as np
 
 class hmm_visualizer:

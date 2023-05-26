@@ -15,14 +15,21 @@ hmmlearn
 sklearn.mixture._gaussian_mixture
 sklearn.linear_model.LogisticRegression
 ```
-### [Current Features](#current-features) · [Installation](#Installation) · [Future Features](#future-features) 
+### [Current Features](#current-features) · [Installation](#Installation) · [Usage](#usage) [Future Features](#future-features) 
 
 ## Current Features
+
+### Algorithms
 - 2D K-Means Clustering
 - 3D K-Means Clustering
 - 3D Gaussian Mixture Models
 - Logistic Regression (On MNIST)
 - Hidden Markov Models (On USD/BTC exchange rates)
+
+### Others
+#### Own implementation of K-Means Clustering can be implemented
+Implement in `user_classes/kmeans.py` and add `iterate()` method to the class.
+The visualizer will check to see if the method exists and use it if it does.
 
 ## Installation
 1. Ensure that you have [installed pip](https://pip.pypa.io/en/stable/installing/). 
@@ -31,15 +38,15 @@ sklearn.linear_model.LogisticRegression
     pip install  git+https://github.com/christoffellis/CS-315-E414-ML-A-742-Visualizer
    ```
 3. Install the requirements (from the root directory)
-```commandline
-pip install -r requirements.txt
-```
+   ```commandline
+   pip install -r requirements.txt
+   ```
 4. Run the main.py file (from the root directory)
-```commandline
-python main.py
-python3 main.py
-py3 main.py
-```
+   ```commandline
+   python main.py
+   python3 main.py
+   py3 main.py
+   ```
 
 ## Usage
 
@@ -77,3 +84,6 @@ py3 main.py
 - Implementation of user loaded algorithms
 - More algorithms
 - Additional visualization for HMMs
+- Customization from user input for
+  - Data means [K-Means, GMM]
+  - Data standard deviations [K-Means, GMM]
