@@ -40,17 +40,23 @@ The visualizer will check to see if the method exists and use it if it does.
 2. Clone the repository
     ```commandline
     pip install  git+https://github.com/christoffellis/CS-315-E414-ML-A-742-Visualizer
-   ```
+    ```
 3. Install the requirements (from the root directory)
-   ```commandline
-   pip install -r requirements.txt
-   ```
+    ```commandline
+    pip install -r requirements.txt
+    ```
 4. Run the main.py file (from the root directory)
-   ```commandline
-   python main.py
-   python3 main.py
-   py3 main.py
-   ```
+    ```commandline
+    python main.py
+    ```
+or
+    ```commandline
+    python3 main.py
+    ```
+or
+    ```commandline
+    py3 main.py
+    ```
 
 ## Usage
 
