@@ -47,12 +47,13 @@ root.mainloop()
 
 if __name__ == "__main__":
     display = pygame.display.set_mode((800, 600))
+    pygame.display.set_caption("CS/ML Visualizer")
 
     if mode == 'dimension reduction':
         dr = dimension_reduction(display)
         dr.update()
 
-    if mode == 'mnist':
+    if mode == 'mnist - logis':
         visualizer = mnist_visualizer(display)
         visualizer.update()
 
