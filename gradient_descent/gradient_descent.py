@@ -267,7 +267,9 @@ class gradient_descent_visualizer:
             target[0] * np.sin(target[1] / 18 * np.pi)
         ])
 
-        self.ball_acc = (target - self.ball_pos) * 0.01
+        speed = config.getfloat('gradient_descent', 'step_size')
+
+        self.ball_acc = (target - self.ball_pos) * speed
 
 
     def draw_info(self):

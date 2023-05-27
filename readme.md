@@ -104,6 +104,7 @@ The parameters are as follows:
 ### gradient_descent
 - `zeros_max` - The maximum value for the final weights (default: 5)
 - `zeros_min` - The minimum value for the final weights (default: -5)
+- `step_size` - The learning rate (default: 0.01)
 
 ### kmeans2d
 - `cluster_count` - The number of clusters to use (default: 3), [1, 6]
