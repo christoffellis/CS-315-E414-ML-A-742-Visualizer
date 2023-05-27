@@ -126,5 +126,6 @@ The parameters are as follows:
 ## Future Features
 - Implementation of user loaded algorithms
 - More algorithms
+- GMM's variance circles can't account for non scalar matrixes
 - Additional visualization for HMMs
 - More user-friendly interface for changing parameters
