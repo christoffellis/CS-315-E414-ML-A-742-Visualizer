@@ -29,6 +29,7 @@ sklearn.linear_model.LogisticRegression
 - 2D K-Means Clustering
 - 3D K-Means Clustering
 - 3D Gaussian Mixture Models
+- Gradient Descent
 - Logistic Regression (On MNIST)
 - Hidden Markov Models (On USD/BTC exchange rates)
 
@@ -81,6 +82,10 @@ the Windows machines won't work due to lack of admin privileges.
 
 ![3D Gaussian Mixture Models](images/gmm-3d.png)
 
+### Gradient Descent
+
+![Gradient Descent](images/gradient_descent.png)
+
 ### Logistic Regression
 
 #### MNIST
@@ -116,6 +121,5 @@ The parameters are as follows:
 ## Future Features
 - Implementation of user loaded algorithms
 - More algorithms
-  - Gradient Descent
 - Additional visualization for HMMs
 - More user-friendly interface for changing parameters

@@ -15,7 +15,14 @@ mode = 'kmeans_3D'
 from tkinter import *
 from tkinter import ttk
 
-options = ['Dimension Reduction', 'MNIST - Logistic Regression', 'Gradient Descent', 'K-Means 2D', 'K-Means 3D', 'Gaussian Mixture Models', 'Hidden Markov Models']
+options = [
+    'Dimension Reduction (WIP)',
+    'MNIST - Logistic Regression',
+    'Gradient Descent',
+    'K-Means 2D',
+    'K-Means 3D',
+    'Gaussian Mixture Models',
+    'Hidden Markov Models']
 # create a tkinter window with each option
 root = Tk()
 root.title("CS/ML Visualizer")
