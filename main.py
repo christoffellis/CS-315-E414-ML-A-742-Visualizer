@@ -1,6 +1,7 @@
 import pygame
 
 from gmm.gmm import gmm_3d
+from gradient_descent.gradient_descent import gradient_descent_visualizer
 from kmeans_3D.kmeans_3d import kmeans_3D
 from mnist.MNIST_visulzer import mnist_visualizer
 from kmeans_2D.kmeans_2d import kmeans_2D
@@ -10,16 +11,20 @@ from hmm.hmm import hmm_visualizer
 
 mode = 'kmeans_3D'
 
+
 from tkinter import *
 from tkinter import ttk
 
-options = ['Dimension Reduction', 'MNIST - Logistic Regression', 'K-Means 2D', 'K-Means 3D', 'Gaussian Mixture Models', 'Hidden Markov Models']
+options = ['Dimension Reduction', 'MNIST - Logistic Regression', 'Gradient Descent', 'K-Means 2D', 'K-Means 3D', 'Gaussian Mixture Models', 'Hidden Markov Models']
 # create a tkinter window with each option
 root = Tk()
-root.title("Choose a mode")
-root.geometry("400x280")
+root.title("CS/ML Visualizer")
+root.geometry("400x360")
 # set window position to center of user's screen
 root.eval('tk::PlaceWindow . center')
+
+# remove borders
+#root.overrideredirect(True)
 
 root.resizable(False, False)
 
@@ -42,7 +47,7 @@ for i in range(len(options)):
 
 root.mainloop()
 
-
+#mode = 'Gradient Descent'
 
 
 if __name__ == "__main__":
@@ -56,6 +61,10 @@ if __name__ == "__main__":
     if mode == 'MNIST - Logistic Regression':
         visualizer = mnist_visualizer(display)
         visualizer.update()
+
+    if mode == 'Gradient Descent':
+        gradient_descent = gradient_descent_visualizer(display)
+        gradient_descent.update()
 
     if mode == 'K-Means 2D':
         kmeans = kmeans_2D(display)

@@ -19,8 +19,9 @@ sklearn.linear_model.LogisticRegression
 ### · [Current Features](#current-features)
 ### · [Installation](#Installation)
 ### · [Usage](#usage)
-### · [Future Features](#future-features) 
 ### · [Config](#config)
+### · [Future Features](#future-features) 
+
 
 ## Current Features
 
@@ -113,5 +114,6 @@ The parameters are as follows:
 ## Future Features
 - Implementation of user loaded algorithms
 - More algorithms
+  - Gradient Descent
 - Additional visualization for HMMs
-- More user friendly interface for changing parameters
+- More user-friendly interface for changing parameters
