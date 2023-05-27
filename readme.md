@@ -101,6 +101,10 @@ the Windows machines won't work due to lack of admin privileges.
 ## Config
 A configuration file, `config.ini`, is used to set the parameters for each algorithm.
 The parameters are as follows:
+### gradient_descent
+- `zeros_max` - The maximum value for the final weights (default: 5)
+- `zeros_min` - The minimum value for the final weights (default: -5)
+
 ### kmeans2d
 - `cluster_count` - The number of clusters to use (default: 3), [1, 6]
 - `x_variance` - The variance of the x values (default: 0.1)
