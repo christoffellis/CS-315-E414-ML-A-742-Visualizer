@@ -39,9 +39,9 @@ The visualizer will check to see if the method exists and use it if it does.
 
 ## Installation
 1. Ensure that you have [installed pip](https://pip.pypa.io/en/stable/installing/). 
-2. Clone the repository
+2. Clone the repository in a directory of choice
     ```commandline
-    pip install  git+https://github.com/christoffellis/CS-315-E414-ML-A-742-Visualizer
+    git clone https://github.com/christoffellis/CS-315-E414-ML-A-742-Visualizer
     ```
 3. Install the requirements (from the root directory)
     ```commandline
@@ -61,6 +61,8 @@ The visualizer will check to see if the method exists and use it if it does.
     py3 main.py
     ```
 
+I can confirm that this process works on University Ubuntu machines, but imagine that
+the Windows machines won't work due to lack of admin privileges.
 ## Usage
 
 ### K-Means Clustering
